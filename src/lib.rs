@@ -472,7 +472,7 @@ impl<Provenance: 'static, Value: 'static> SeparateProvenanceMap<Provenance, Valu
     /// ```
     pub fn keys(&self) -> impl Iterator<Item = Key<Provenance>> {
         (0..self.elements.len())
-            .map(|index| Key::new(index))
+            .map(Key::new)
     }
 
     /// Get an [iterator](Iterator) over immutable references to each value in the map.
@@ -542,7 +542,7 @@ impl<Provenance: 'static, Value: 'static> SeparateProvenanceMap<Provenance, Valu
             }
         }
 
-        return None
+        None
     }
 
     /// Search the map in insertion order for the first value that satisfy the given predicate.
@@ -577,7 +577,7 @@ impl<Provenance: 'static, Value: 'static> SeparateProvenanceMap<Provenance, Valu
             }
         }
 
-        return None
+        None
     }
 }
 
