@@ -1,8 +1,15 @@
 [package]
 name = "provenance"
 version = "0.1.0"
-authors = ["Jesper Larsson <jesper.a.larsson@outlook.com>"]
+authors = ["Jesper Larsson"]
 edition = "2018"
+description = "Container structures that generate key upon insertion that only works with the map that generated it."
+readme = "./README.md"
+repository = "https://github.com/MrLarssonJr/provenance"
+license = "MIT"
+categories = ["data-structures", "memory-management"]
+keywords = ["provenance", "arena", "storage", "key", "map"]
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
