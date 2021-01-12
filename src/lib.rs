@@ -138,7 +138,7 @@ pub struct ProvenanceMap<Value> {
 impl<Value: 'static> ProvenanceMap<Value> {
 
     /// Create a new map if one with the given signature have not already been created.
-    /// If one has, `None` is returned.
+    /// If one has, [`None`](std::option::Option::None) is returned.
     /// ```
     /// use provenance::ProvenanceMap;
     ///
@@ -269,7 +269,7 @@ impl<Value: 'static> ProvenanceMap<Value> {
     ///
     /// assert_eq!(Some(&2), map.find(|&val| val == 2));
     /// ```
-    /// otherwise `None` is returned.
+    /// otherwise [`None`](std::option::Option::None) is returned.
     /// ```
     /// use provenance::ProvenanceMap;
     /// let mut map = ProvenanceMap::<i32>::new().unwrap();
@@ -361,7 +361,7 @@ impl<Provenance: 'static, Value: 'static> SeparateProvenanceMap<Provenance, Valu
 
     /// Creates a new empty map with some type as provenance.
     ///
-    /// If a map with such provenance already has been created, `None` will be returned.
+    /// If a map with such provenance already has been created, [`None`](std::option::Option::None) will be returned.
     /// Thus be careful to not drop maps unintentionally.
     /// ```
     /// use provenance::SeparateProvenanceMap;
@@ -523,7 +523,7 @@ impl<Provenance: 'static, Value: 'static> SeparateProvenanceMap<Provenance, Valu
     ///
     /// assert_eq!(Some(&2), map.find(|&val| val == 2));
     /// ```
-    /// otherwise `None` is returned.
+    /// otherwise [`None`](std::option::Option::None) is returned.
     /// ```
     /// use provenance::SeparateProvenanceMap;
     /// struct Provenance;
